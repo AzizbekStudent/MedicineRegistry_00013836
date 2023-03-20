@@ -15,7 +15,7 @@ To run this application in local machines you should do following actions:
 
 1. Copy this repository to your PC or Laptop
 ```bash
-git clone [repository link]
+git clone https://github.com/AzizbekStudent/MedicineRegistry_00013836.git
 ```
 
 2. Install dependecies ("express", "pug")
@@ -40,4 +40,6 @@ node app
 - pug.js
 
 ### Web application repository on github
-[link to the github repository] ()
+[link to the github repository] (https://github.com/AzizbekStudent/MedicineRegistry_00013836.git)
+
+[link to glitch, host of the application]
