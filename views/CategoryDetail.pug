@@ -1,0 +1,33 @@
+extends layout.pug 
+block Title_Web
+    title Details
+
+
+block Header
+    header.navigation 
+                h1 
+                    a.logo(href='/') Medicine Registry
+
+                nav.navLinks
+                    a.links(href='/medicines/list') All medicines
+                    a.links(href='/medicines/create') New medicine
+                    a.links.active(href='/categories/list') All categories
+                    a.links(href='/categories/create') New category
+
+block MainContent
+    div.h2_position
+        h2 Details
+    div.container
+    if category
+        form.form(action=`/categories/list/${category.id}/update` method="POST")
+            label title 
+            input.input(type="text" name="Name" value= category.title)
+
+            label description 
+            input.input(type="text" name="Description" value= category.description)
+
+            button.btn submit 
+        
+    else 
+        p There is no such record
+    

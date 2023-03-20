@@ -1,0 +1,30 @@
+extends layout.pug 
+block Title_Web
+    title Medicines 
+
+block Header
+    header.navigation 
+                h1 
+                    a.logo(href='/') Medicine Registry
+
+                nav.navLinks
+                    a.links.active(href='/medicines/list') All medicines
+                    a.links(href='/medicines/create') New medicine
+                    a.links(href='/categories/list') All categories
+                    a.links(href='//categories/create') New category
+
+block MainContent
+    div.medicines_List
+        div.h2_position
+            h2 All medicines
+
+        if error 
+            p.error You cannot submit empty data
+        if sended 
+            p.succes Data is changed and saved 
+        if deleted_item
+            p.succes Data is deleted
+        each medicine in Medicines
+            div.medicine_wrapper 
+                a.medicine(href=`/medicines/list/${medicine.id}`) #{medicine.title}
+                a.deleteMed(href=`/medicines/list/${medicine.id}/delete`) Delete

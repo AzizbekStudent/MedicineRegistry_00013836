@@ -1,0 +1,26 @@
+extends layout.pug 
+block Title_Web
+    title Home page 
+
+block Header
+    header.navigation 
+                    h1 
+                        a.logo.active(href='/') Medicine Registry
+
+                    nav.navLinks
+                        a.links(href='/medicines/list') All medicines
+                        a.links(href='/medicines/create') New medicine
+                        a.links(href='/categories/list') All categories
+                        a.links(href='/categories/create') New category
+
+block MainContent
+    p.warning “This web application was created to fulfill Web Technology module's requirements and does not represent an actual company or service”.
+    div.h2_position
+        h2 With this application you can create list of medicines with particular category
+    
+    div.Link_Container 
+        a.link(href='/medicines/create') New Medicine
+        a.link(href='/categories/create') New Category
+                  
+    div.image_container 
+        img(src="/static/images/online-marketing-hIgeoQjS_iE-unsplash.jpg", alt="Medicine") 

@@ -1,0 +1,35 @@
+extends layout.pug 
+block Title_Web
+    title New category 
+
+
+block Header
+    header.navigation 
+                h1 
+                    a.logo(href='/') Medicine Registry
+
+                nav.navLinks
+                    a.links(href='/medicines/list') All medicines
+                    a.links(href='/medicines/create') New medicine
+                    a.links(href='/categories/list') All categories
+                    a.links.active(href='/categories/create') New category
+
+
+block MainContent
+    div.h2_position
+        h2 Add new medicine to database
+
+    if error
+        p.error You entered empty data. Try again!!!  
+    
+    if succes
+        p.succes  Data is saved in the system!
+    div.FormContainer
+        form.form(action="/categories/create" method = "POST")
+            label Category name
+            input.input(type="text" name= "Name_Category")
+
+            label Category description
+            input.input(type="text" name= "Description_Category")
+
+            button.btn Submit 

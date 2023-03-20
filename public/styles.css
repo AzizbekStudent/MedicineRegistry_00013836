@@ -1,0 +1,280 @@
+/*Student ID: 00013836*/
+
+/* ===============================
+   == Design of the application ==
+   ===============================
+   M e d i c i n e R e g i s t r y 
+   ===============================*/
+
+/*Main things for each webpage*/
+body{
+    position: relative;
+    min-height: 100vh;
+    height: auto;
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+    min-width: 1100px;
+    width: 1100px;
+    max-width: 1100px;
+    color: black;
+    background-color: #fff;
+}
+/*Setting default configurations "My settings" for whole web page*/
+.container{
+    display: flex;
+    flex-direction: column;
+}
+main{
+    min-height: calc(100% - 60px); /* 60px is the height of the footer */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* ====================
+   == Navigation bar == 
+   ==================== */
+.navigation{
+    background-color: rgb(36, 172, 36);
+    width: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.navigation a:hover{
+    color: yellow;
+    transition: 1s;
+}
+/* navigation is seperated to 2 parts: LOGO and Links*/
+.logo{
+    margin: 0 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 2.5rem;
+}
+/*Links*/
+.navLinks {
+    display: inline-block;
+    padding: 15px 25px;
+}
+.navLinks a{
+    color: #fff;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+/*Active page*/
+.active{
+    border-bottom: 2px solid yellow;
+}
+/* ===========================
+   == End of the navigation == 
+   =========================== */
+main{
+    min-height: 100vh;
+}
+/* == Footer == */
+footer{
+    background-color: black;
+    color: white;
+    height: 60px;
+    margin-top: 2%;
+    width: 1100px;
+    display: flex;
+    justify-content: space-between;
+}
+.S_id{
+    color: #fff;
+    font-size: 1.5rem;
+    margin-left: 40px;
+    margin-top: 20px;
+}
+.S_gr{
+    color: #fff;
+    font-size: 1.3rem;
+    margin-right: 40px;
+    margin-top: 20px;
+}
+
+
+/* == Home page == */
+.warning{
+    color: #fff;
+    background-color: #000;
+    width: 100%;
+    margin: 0%;
+    padding: 0%;
+    font-size: 1.2rem;
+    text-align: center;
+}
+.Link_Container{
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+    padding: 0px;
+    width: 100%;
+    height: auto;
+}
+.link{
+    margin: 2%;
+    text-decoration: none;
+    color: white;
+    background: tomato;
+    padding: 10px 20px;
+    width: 20%;
+}
+.RecordsContainer{
+    height: auto;
+    display: flex;
+    width: 80%;
+    border: 2px #cfb solid;
+    margin: 1% auto 10%;
+}
+.allMedicines{
+    margin: 1% 0;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.allCategories{
+    margin: 1% auto;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+}
+.image_container{
+    width: 100%;
+    height: auto;
+}
+.image_container img{
+    width: 1100px;
+    height: auto;
+    /*image was taken from this url  https://unsplash.com/photos/hIgeoQjS_iE   */
+}
+
+/* Create new medicine and new category*/
+.h2_position{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.form{
+    max-width: 70%;
+    margin: 5% auto;
+}
+
+.input{
+    margin: 10px 0;
+    width: 100%;
+    display: block;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 3px #cbc solid;
+}
+
+.btn {
+    margin: 10px 0;
+    width: 100%;
+    display: inline-block;
+    background-color: rgb(221, 218, 55);
+    padding: 10px;
+    color: black;
+}
+
+
+.error{
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    color: tomato;
+    border: 3px solid tomato;
+    font-size: 1.2rem;
+    width: 95%;
+    margin: 1% 2.5%;
+}
+
+.succes{
+    display: inline-block;
+    text-align: center;
+    padding: 20px;
+    color: green;
+    border: 3px solid green;
+    font-size: 1.2rem;
+    width: 95%;
+    margin: 1% 2.5%;
+}
+
+
+
+/* Medicines list*/
+.medicine_wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 0;
+    margin: 0 auto;
+}
+.medicine_wrapper .medicine:hover{
+    color: tomato;
+    transition: 0.5s;
+    background-color: lightgreen;
+}
+.medicine{
+    width: 100%;
+    margin: 1% 1% 0 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: green;
+    color: #fff;
+}
+.deleteMed{
+    margin: 1% 0 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: tomato;
+    color: #fff;
+}
+/* medicines details*/
+
+
+
+/* Categories list*/
+.Category_wrapper{
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px 0;
+    margin: 0 auto;
+}
+.Category_wrapper .category:hover{
+    color: tomato;
+    transition: 0.5s;
+    background-color: lightgreen;
+}
+
+
+.category{
+    width: 100%;
+    margin: 1% 1% 0 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: green;
+    color: #fff;
+}
+.deleteCat{
+    margin: 1% 0 0;
+    text-decoration: none;
+    display: inline-block;
+    padding: 15px 20px;
+    background-color: tomato;
+    color: #fff;
+}
