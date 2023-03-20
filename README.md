@@ -40,6 +40,6 @@ node app
 - pug.js
 
 ### Web application repository on github
-[link to the github repository] (https://github.com/AzizbekStudent/MedicineRegistry_00013836.git)
+[link to the github repository](https://github.com/AzizbekStudent/MedicineRegistry_00013836.git)
 
-[link to glitch, host of the application]
+[link to glitch, host of the application](https://diamond-tasty-bellusaurus.glitch.me/)
