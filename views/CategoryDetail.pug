@@ -19,12 +19,12 @@ block MainContent
         h2 Details
     div.container
     if category
-        form.form(action=`/categories/list/${category.id}/update` method="POST")
+        form.form(action=`/categories/list/${category.id}/update` method="POST" onsubmit="return FormValidation_C()")
             label title 
-            input.input(type="text" name="Name" value= category.title)
+            input.input(type="text" name="Name" id="name_c" value= category.title)
 
             label description 
-            input.input(type="text" name="Description" value= category.description)
+            input.input(type="text" name="Description" id="decs_c" value= category.description)
 
             button.btn submit 
         

@@ -25,11 +25,11 @@ block MainContent
     if succes
         p.succes  Data is saved in the system!
     div.FormContainer
-        form.form(action="/categories/create" method = "POST")
+        form.form(action="/categories/create" method = "POST" onsubmit="return FormValidation_C()")
             label Category name
-            input.input(type="text" name= "Name_Category")
+            input.input(type="text" name= "Name_Category" id="name_c")
 
             label Category description
-            input.input(type="text" name= "Description_Category")
+            input.input(type="text" name= "Description_Category" id="decs_c")
 
             button.btn Submit 
